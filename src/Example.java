@@ -4,6 +4,7 @@ public class Example {
     // method
     public static void main(String[] args) {
         // max, min, abs, pow
+        // Math is a class
         System.out.println(Math.ceil(-2.001));
         System.out.println(Math.floor(-3.999));
         System.out.println(Math.max(2.0, 3));
@@ -52,6 +53,7 @@ public class Example {
             System.out.println("Enter a valid email address: ");
             email = scanner.nextLine();
         }
+
     }
     // many other methods
 }
