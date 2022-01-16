@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Loops {
     public static void main(String[] args) {
         // loop that executes some task over and over until your condition
@@ -66,14 +68,12 @@ public class Loops {
 
 
         // while
-
         int a = 10;
         while (a > 0) { // 10 - 1 -> 0 >/ 0
             // inside part keeps running until condition is true
             System.out.println(a);
             a--; // 10 -> 9 -> 8 -> .... -> 1 -> 0
         }
-
 
         // do-while
         int b = 7;
@@ -85,10 +85,58 @@ public class Loops {
 
         // Practice
         // IF, ELSE IF, ELSE: make a system where if (user == 10) -> ____, else if (user == 15),
-        // -> ___, else ->
-        // FOR LOOP: print from 1 - 10; only even numbers
-        // WHILE: print "Hello" 5 times (seems like a for loop problem)
+        // -> ___, else -> (switch as well)
+        int userAge = 10;
+        if (userAge == 10){
+            System.out.println("You're 10");
+        } else if (userAge == 15) {
+            System.out.println("You're 15");
+        } else {
+            System.out.println("You are not 10 or 15");
+        }
 
+        switch (userAge) {
+            case 10:
+                System.out.println("double digits!");
+                break;
+            case 15:
+                System.out.println("almost at 16!");
+                break;
+            default:
+                System.out.println("You're are not 10 or 15");
+                break;
+        }
+
+        // FOR LOOP: print from 1 - 10; only even numbers
+        for (int i = 1; i <= 10; i++) {
+            // if i % 2 is 0 then we print i, the number
+            // "not" even -> odd
+            if ( !(i % 2 == 0) ) {  // negating it
+                System.out.println("Number: " + i);
+            }
+        }
+
+        // WHILE: print "Hello" 5 times (seems like a for loop problem)
+        // a while loop is the deconstructed version of a for loop
+        // for (initialization, range, incrementation) {...}
+        int helloCounter = 1;
+        while (helloCounter <= 5) {
+            System.out.println("Hello");
+            helloCounter++;
+        }
+
+        // initialization
+        // while (range) {... incrementation}
+
+
+        // 1 use case of for loop
+        String input = "aaaaabbbbpihasnp";
+        int[] charFreq = new int[26];
+        for (char letter : input.toCharArray()) {
+            int index = letter - 'a'; // gets the index of the letter
+            charFreq[index]++;
+        }
+        System.out.println(Arrays.toString(charFreq));
 
 
     }
