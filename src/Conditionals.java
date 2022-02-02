@@ -54,5 +54,51 @@ public class Conditionals {
                 break;
         }
 
+        String food = "Pizza";
+
+        switch (food) {
+            case "Pizza":
+                System.out.println("Pizza is good");
+                break;
+            default:
+                System.out.println("default case");
+        }
+
+        int j = 5;
+        switch(j)
+        {
+            case 5:
+                j++;
+                break;
+            case 6:
+                j++;
+                break;
+            case 7:
+                j++;
+                break;
+        }
+        System.out.println(j);
+
+        int counter = 10;
+        System.out.println(++counter);
+
+        String word = "abc";
+
+        String word2 = "abc";
+        System.out.println(word == word2);
+
+        String word3 = "hello";
+        String word4 = "bye";
+        System.out.println(word3 == word4); // different address
+
+        // trick
+        String word5 = "hello";
+        String word6 = "HELLO".toLowerCase(); // -> hello
+        System.out.println(word5 == word6);
+
+
+
+
+
     }
 }
