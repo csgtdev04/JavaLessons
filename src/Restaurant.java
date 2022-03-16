@@ -15,5 +15,7 @@ public class Restaurant {
 
             NUM_PEOPLE_IN_LINE--;
         } while (NUM_PEOPLE_IN_LINE > 0);
+
+
     }
 }
